@@ -1,0 +1,21 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:WpfApplication1" xmlns:vdrawWpfControlLibrary="clr-namespace:vdrawWpfControlLibrary;assembly=vdrawWpfControlLibrary" x:Class="WpfApplication1.MainWindow"
+        Title="MainWindow" Height="369" Width="867">
+    <DockPanel x:Name="dock" Margin="0,0,2,0">
+        <Menu x:Name="menucommands" DockPanel.Dock="Top">
+            <MenuItem Header="Commands">
+                <MenuItem Header="Open" Click= "OpenFile"/>
+                <MenuItem Header="New" Click= "New"/>
+                <Separator HorizontalAlignment="Left" Width="166"/>
+                <MenuItem Header="Zomm Extents" Click="ZoomExtents" />
+                <MenuItem Header="BackGround" Click="BackGround" />
+                <MenuItem Header="Cursor" Click="ChangeCursor" />
+                <MenuItem Header="Layer Form" Click="Layers" />
+                <MenuItem Header="All Items Red" Click="ItemsRed" />
+                <MenuItem Header="Axis" Click="Axis" />
+            </MenuItem>
+        </Menu>
+       
+        <vdrawWpfControlLibrary:vdrawControl  x:Name="vdraw"  DockPanel.Dock="Bottom"  Background="Bisque"/>
+    </DockPanel>
+
+</Window>

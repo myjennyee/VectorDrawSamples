@@ -1,0 +1,14 @@
+﻿//Remarks
+//Main command,optional command line call,dll name,namespace,static function name
+
+Open,Ανοιξε,VectorDraw.Professional.dll,VectorDraw.Professional.ActionUtilities.vdCommandAction,OpenEx
+SaveAs,ΣωσεΩς,VectorDraw.Professional.dll,VectorDraw.Professional.ActionUtilities.vdCommandAction,SaveAsEx
+New,Νεο,VectorDraw.Professional.dll,VectorDraw.Professional.ActionUtilities.vdCommandAction,NewEx
+
+View3DVrot,,VectorDraw.Professional.dll,VectorDraw.Professional.ActionUtilities.vdCommandAction,View3D_Vrot
+
+//Support path of document must include the path of vdCustomFigs.dll
+Polygon,,VectorDrawCustomFigs_VB.dll,VectorDrawCustomFigs_VB.ActionPolygon,CmdPolygon
+ArrowLine,,VectorDrawCustomFigs_VB.dll,VectorDrawCustomFigs_VB.ActionArrowLine,CmdArrowLine
+Blink,,VectorDrawCustomFigs_VB.dll,VectorDrawCustomFigs_VB.ActionBlink,CmdBlink
+OffsetLine,,VectorDrawCustomFigs_VB.dll,VectorDrawCustomFigs_VB.VectorDrawOffsetLine,CmdOffsetLine

@@ -1,0 +1,92 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF2FF075-639F-4BA1-89B8-4E2145BDFDDD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MultiPrint</RootNamespace>
+    <AssemblyName>MultiPrint</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="vdDXF, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\vdDXF.dll</HintPath>
+    </Reference>
+    <Reference Include="vdxFcnv, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\vdxFcnv.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Actions, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Generics, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Generics.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Geometry, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Professional, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Professional.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Render, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Render.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Serialize, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Serialize.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if EXIST "$(VDRAWDEV)vdlic.exe" ("$(VDRAWDEV)vdlic.exe"  "$(TargetPath)")</PostBuildEvent>
+  </PropertyGroup>
+</Project>

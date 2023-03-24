@@ -1,0 +1,80 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{235D47FB-10EF-444D-83C3-8BD7649C84E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>vdCustomFigs</RootNamespace>
+    <AssemblyName>vdCustomFigs</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VectorDraw.Actions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\vdraw6\REDIS\VectorDraw.Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Generics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\vdraw6\REDIS\VectorDraw.Generics.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Geometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\vdraw6\REDIS\VectorDraw.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Professional, Version=6.0.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\vdraw6\REDIS\VectorDraw.Professional.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Render, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\vdraw6\REDIS\VectorDraw.Render.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Serialize, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\vdraw6\REDIS\VectorDraw.Serialize.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="vdArrowPolyline.cs" />
+    <Compile Include="vdPolygon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)\redis</PostBuildEvent>
+  </PropertyGroup>
+</Project>

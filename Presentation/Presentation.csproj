@@ -1,0 +1,176 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24B4F2B1-C060-43B8-8AC4-9F92F43CA166}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentation</RootNamespace>
+    <AssemblyName>Presentation</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenVDF, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\OpenVDF.dll</HintPath>
+    </Reference>
+    <Reference Include="RenderFormats, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\RenderFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="vdCommandLine, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\vdCommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="vdFramedControl, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\vdFramedControl.dll</HintPath>
+    </Reference>
+    <Reference Include="VDrawBaseControl, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VDrawBaseControl.dll</HintPath>
+    </Reference>
+    <Reference Include="vdScrollableControl, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\vdScrollableControl.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Actions, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Generics, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Generics.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Geometry, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Professional, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Professional.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Render, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Render.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Serialize, Version=7.7000.0.0, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\REDIS\AnyCPU\VectorDraw.Serialize.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3DObjects.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bricks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marble.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Painting.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roof.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Materials\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>if EXIST "$(VDRAWDEV)vdlic.exe" ("$(VDRAWDEV)vdlic.exe"  "$(TargetPath)")</PostBuildEvent>
+  </PropertyGroup>
+</Project>

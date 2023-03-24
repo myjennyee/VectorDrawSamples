@@ -1,0 +1,23 @@
+﻿//Remarks
+//Subbutton = Name(Text) , Command , Icon image
+ImagesFolder = ..\images
+
+MainMenu = Custom Objects
+   SubButton = Rotate 3D , View3DVrot , 3D_orbit.ico
+   SubButton = Polygon , Polygon , 
+   SubButton = Arrow Line , ArrowLine , 
+   SubButton = Blink , Blink ,
+   SubButton = OffsetLine , OffsetLine ,
+   SubButton = SimpleRect, VectorDrawSimpleRect ,
+   SubButton = RectEx, RectEx ,
+   SubButton = LabelLine, LabelLine ,
+   SubButton = LineConnection, LineConnectionEx ,
+
+
+   SubButton = New, New ,NewFile.ico
+   SubButton = Open, Open ,OpenFile.ico
+   SubButton = SaveAs, SaveAs ,SaveFile.ico
+   
+   SubButtonMenu = UCS
+	SubMenuButton = UCS World, UCSW,3d_wcs.ico
+	SubMenuButton = UCS View , UCSV,  3d_ucs.ico
